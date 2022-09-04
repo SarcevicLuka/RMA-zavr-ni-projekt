@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/destinationListFragment">
+
+    <fragment
+        android:id="@+id/destinationListFragment"
+        android:name="com.example.touristdestinationtracker.ui.destination_list.DestinationListFragment"
+        android:label="DestinationListFragment">
+        <action
+            android:id="@+id/action_destinationListFragment_to_destinationDetailsFragment"
+            app:destination="@id/destinationDetailsFragment" />
+        <action
+            android:id="@+id/action_destinationListFragment_to_newDestinationFragment"
+            app:destination="@id/newDestinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDestinationFragment"
+        android:name="com.example.touristdestinationtracker.ui.destination_new.NewDestinationFragment"
+        android:label="NewDestinationFragment">
+        <action
+            android:id="@+id/action_newDestinationFragment_to_destinationListFragment"
+            app:destination="@id/destinationListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationDetailsFragment"
+        android:name="com.example.touristdestinationtracker.ui.destination_details.DestinationDetailsFragment"
+        android:label="DestinationDetailsFragment">
+        <action
+            android:id="@+id/action_destinationDetailsFragment_to_destinationListFragment"
+            app:destination="@id/destinationListFragment" />
+        <argument
+            android:name="destinationId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_destinationDetailsFragment_to_destinationMapFragment"
+            app:destination="@id/destinationMapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationMapFragment"
+        android:name="com.example.touristdestinationtracker.ui.destination_map.DestinationMapFragment"
+        android:label="DestinationMapFragment" >
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+    </fragment>
+</navigation>

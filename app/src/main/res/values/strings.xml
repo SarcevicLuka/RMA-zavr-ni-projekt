@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TouristDestinationTracker</string>
+    <string name="message_saving">Saving destination</string>
+    <string name="location_cannot_be_accessed">Location cannot be accessed</string>
+    <string name="label_save_destination">Save destination</string>
+    <string name="label_take_image">Take image</string>
+    <string name="label_get_location">Get Location</string>
+    <string name="label_date">Date</string>
+    <string name="label_country">Country</string>
+    <string name="label_city">City</string>
+    <string name="picture_warning">Picture must be taken</string>
+    <string name="hint_destination_content_input">Enter short description</string>
+    <string name="label_no_such_destination">Sorry, no such destination exists.</string>
+</resources>
