@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.touristdestinationtracker.R
 import com.example.touristdestinationtracker.databinding.FragmentDestinationListBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -48,7 +49,7 @@ class DestinationListFragment : Fragment(), OnDestinationEventListener {
 
                 override fun onSwiped(viewHolder: ViewHolder, direction: Int) {
                     viewModel.delete(adapter.getDestinationAt(viewHolder.adapterPosition))
-                    Toast.makeText(activity, "Destination deleted", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(activity, getString(R.string.message_deleted), Toast.LENGTH_SHORT).show()
                 }
             }).attachToRecyclerView(binding.destinationListRv)
 

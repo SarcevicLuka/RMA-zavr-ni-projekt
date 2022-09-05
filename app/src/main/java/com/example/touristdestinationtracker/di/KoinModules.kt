@@ -18,8 +18,8 @@ val databaseModule = module {
     fun provideDestinationDao(database: DestinationDatabase): DestinationDao {
         return database.getDestinationDao()
     }
-    single<DestinationDatabase>{ provideDatabase(get()) }
-    single<DestinationDao> { provideDestinationDao(get()) }
+    single { provideDatabase(get()) }
+    single { provideDestinationDao(get()) }
 }
 
 val repositoryModule = module {

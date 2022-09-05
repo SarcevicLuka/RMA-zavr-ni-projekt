@@ -10,11 +10,10 @@ import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 import org.koin.core.logger.Level
-import org.koin.core.logger.Logger
 
 class DestinationTracker: Application() {
      override fun onCreate() {
-         Log.d("STARTED","Pokrenuta aplikacija");
+         Log.d("STARTED","Pokrenuta aplikacija")
          super.onCreate()
          application = this
 

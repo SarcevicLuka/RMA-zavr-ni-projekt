@@ -23,7 +23,7 @@ class DestinationDetailsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentDestinationDetailsBinding.inflate(layoutInflater)
         binding.bShowOnMap.setOnClickListener { showLocationOnMap() }
 
@@ -56,7 +56,7 @@ class DestinationDetailsFragment : Fragment() {
             binding.apply {
                 tvDestinationLocation.text = destination.locationCity + ", " + destination.locationCountry
                 tvDestinationDate.text = destination.dateAdded
-                tvDestinationDescritpion.text = "Decription: " + destination.shortDescription
+                tvDestinationDescritpion.text = "Description: " + destination.shortDescription
                 ivDestinationDetailsImage.setImageBitmap(converter.convertByteArrayToImage(destination.image))
                 return
             }
