@@ -9,7 +9,6 @@ class DestinationListViewModel(
 ): ViewModel() {
     var destinations = destinationRepository.getAllDestinations()
 
-
     fun delete(destination: Destination) {
         destinationRepository.delete(destination)
     }
